@@ -17,13 +17,10 @@
 get_header();
 ?>
 	<main class="site-main container">
-
 	<?php
 		get_template_part( 'template-parts/content/content-highlight', 'left' );
 		get_template_part( 'template-parts/content/content-highlight', 'right' );
 	?>
-
 	</main><!-- .site-main -->
-
 <?php
 get_footer();

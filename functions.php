@@ -43,4 +43,3 @@ add_filter('xmlrpc_enabled', '__return_false');
 
 // DISABLE ADMIN BAR
 add_filter('show_admin_bar', '__return_false');
-

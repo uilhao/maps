@@ -11,7 +11,6 @@
  */
 
 ?>
-
 	</div><!-- #content -->
 
 	<footer class="container py-5">
