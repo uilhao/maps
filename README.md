@@ -4,7 +4,7 @@
 $ npm run build-css
 ```
 
-## Watch the Sass
+## Watch Sass
 
 ```
 $ npm run watch-css
