@@ -16,7 +16,7 @@
         <a class="btn btn-primary" href="#">Veja mais</a>
     </div>
     <div class="col-md-5">
-        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="wp-content/themes/maps/assets/img/example-2.jpg"></img>
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="wp-content/themes/maps/assets/img/example-2.jpg" />
     </div>
 </div>
 
