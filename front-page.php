@@ -16,7 +16,7 @@
 
 get_header();
 ?>
-	<main class="site-main container">
+	<main class="site-main">
 	<?php
 		get_template_part( 'template-parts/content/content-highlight', 'left' );
 		get_template_part( 'template-parts/content/content-highlight', 'right' );

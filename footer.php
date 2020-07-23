@@ -14,11 +14,8 @@
 	</div><!-- #content -->
 
 	<footer class="container py-5">
+		<hr class="py-3" />
 		<div class="row">
-			<div class="col-md-2">
-				<div class="logo"></div>
-				<small class="d-block mb-3 text-muted">© 2017-2020</small>
-			</div>
 			<div class="col-6 col-md">
 				<h5>Sobre a Maps</h5>
 				<ul class="list-unstyled text-small">
@@ -33,6 +30,10 @@
 					<li><a class="text-muted" href="#">Instagram</a></li>
 					<li><a class="text-muted" href="#">Facebook</a></li>
 				</ul>
+			</div>
+			<div class="col-md-2">
+				<div class="logo"></div>
+				<small class="d-block mb-3 text-muted">© 2017-2020</small>
 			</div>
 		</div>
 	</footer><!-- .main-footer -->

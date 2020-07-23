@@ -1,3 +1,8 @@
 .site-content {
-  padding: $vertical-space;
+  // padding-top: $vertical-space;
+  padding-bottom: $vertical-space;
+}
+
+.content-area {
+  padding-top: $vertical-space;
 }

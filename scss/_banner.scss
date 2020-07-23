@@ -8,5 +8,6 @@ $padding: $nav-height + $navbar-padding-x + $navbar-brand-padding-y;
   color: $white;
   text-shadow: 2px 2px $black;
   margin-top: $padding;
+  margin-bottom: 2rem;
   padding: $padding 0;
 }

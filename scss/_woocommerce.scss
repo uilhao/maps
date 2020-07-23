@@ -1,0 +1,18 @@
+.cart-contents {
+  background: url("../img/shopping-cart-64.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 40px;
+  width: 40px;
+
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.cart-contents-count {
+  padding: 4px 15px;
+  display: block;
+}
