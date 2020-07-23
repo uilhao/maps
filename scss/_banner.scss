@@ -1,8 +1,12 @@
+$padding: $nav-height + $navbar-padding-x + $navbar-brand-padding-y;
+
 .banner {
-  background: url("../img/jeans-header.jpg");
+  background: url("../img/jeans-header-low.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0% -8%;
+  // background-position: 0% -8%;
   color: $white;
   text-shadow: 2px 2px $black;
+  margin-top: $padding;
+  padding: $padding 0;
 }

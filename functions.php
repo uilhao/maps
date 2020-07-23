@@ -2,9 +2,15 @@
 
 // STYLE
 function ms_add_theme_scripts() {
-  wp_enqueue_style( 'main-style', get_template_directory_uri() . "/assets/css/main.min.css", false, '1.0' );
+	// CSS
+	wp_enqueue_style( 'main-style', get_template_directory_uri() . "/assets/css/main.min.css", false, '1.0' );
+	
+	// JS
+	wp_enqueue_script( 'collapse-js', get_template_directory_uri() . "/assets/js/collapse.js", ['jquery'], '1.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'ms_add_theme_scripts' );
+
+add_theme_support( 'title-tag' );
 
 // HEADER CLEAN UP
 function ms_remove_version() {
@@ -34,7 +40,7 @@ remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
 // REMOVE EMBED
 function my_deregister_scripts(){
- wp_dequeue_script( 'wp-embed' );
+	wp_dequeue_script( 'wp-embed' );
 }
 add_action( 'wp_footer', 'my_deregister_scripts' );
 

@@ -12,7 +12,9 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="<?= get_stylesheet_directory_uri() ?>/assets/img/favicon.ico" />
 	<?php wp_head(); ?>
 </head>
 
@@ -25,17 +27,17 @@
 			<div class="container">
 				<a class="navbar-brand" href="/"><div class="logo"></div></a>
 				
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<button class="navbar-toggler" type="button">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
-				<div class="collapse navbar-collapse">
+				<div class="navbar-collapse collapse">
 					<ul class="navbar-nav mr-auto">
 						<li class="nav-item">
 						<a class="nav-link" href="#">Calças</a>
 						</li>
 						<li class="nav-item">
-						<a class="nav-link" href="#">Sobre</a>
+						<a class="nav-link" href="/sobre-a-maps/">Sobre</a>
 						</li>
 					</ul>
 				</div><!-- .collapse -->
@@ -43,12 +45,12 @@
 		</nav>
 	</header>
 
-	<div class="banner position-relative overflow-hidden p-3 p-md-5 text-center bg-light">
-		<div class="col-md-6 p-lg-6 mx-auto my-5">
+	<div class="banner position-relative overflow-hidden text-center bg-light">
+		<div class="col-md-6 p-lg-6 mx-auto">
 			<h1 class="display-4 font-weight-normal">Calças que desafiam as normas</h1>
 			<p class="lead font-weight-normal">Nosso objetivo é fornecer calças para mulheres altas e com medidas em que o "normal" nao serve.</p>
 			<a class="btn btn-secondary" href="#">Veja mais</a>
 		</div>
 	</div>
 
-	<div class="site-content">
+	<div class="site-content container">
