@@ -34,9 +34,7 @@ get_header( 'shop' ); ?>
 		<?php while ( have_posts() ) : ?>
 			<?php the_post(); ?>
 
-			<?php 
-			the_content();
-			?>
+			<?php the_content(); ?>
 
 		<?php endwhile; // end of the loop. ?>
 

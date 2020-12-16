@@ -11,10 +11,6 @@
 get_header();
 ?>
 
-	<div class="breadcrumb">
-		<?php bcn_display($return = false, $linked = true, $reverse = false, $force = false); ?>
-	</div>
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 

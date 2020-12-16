@@ -14,6 +14,18 @@ add_action( 'wp_enqueue_scripts', 'ms_add_theme_scripts' );
 // Extensions
 add_theme_support( 'title-tag' );
 
+/*
+* Enable support for Post Thumbnails on posts and pages.
+*
+* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+*/
+add_theme_support( 'post-thumbnails' );
+set_post_thumbnail_size( 1568, 9999 );
+
+// Nav color.
+
+
+
 function ms_add_woocommerce_support() {
     add_theme_support( 'woocommerce' );
 }
@@ -61,10 +73,10 @@ add_filter('xmlrpc_enabled', '__return_false');
 add_filter('show_admin_bar', '__return_false');
 
 
-add_shortcode ('woo_cart_icon', 'woo_cart_icon' );
 /**
  * Create Shortcode for WooCommerce Cart Menu Item
  */
+add_shortcode ('woo_cart_icon', 'woo_cart_icon' );
 function woo_cart_icon() {
 	ob_start();
  

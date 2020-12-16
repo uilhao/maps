@@ -1,18 +1,21 @@
 .cart-contents {
-  background: url("../img/shopping-cart-64.png");
+  background: url(../img/cart.svg);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  height: 40px;
-  width: 40px;
+  height: 32px;
+  width: 32px;
+  margin: 0px 10px 0 3px;
 
   a {
-    color: $white;
+    color: $black;
     text-decoration: none;
   }
 }
 
 .cart-contents-count {
-  padding: 4px 15px;
+  padding: 8px 15px;
   display: block;
+  font-size: 10px;
+  font-weight: bolder;
 }

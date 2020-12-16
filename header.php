@@ -22,43 +22,8 @@
 <?php wp_body_open(); ?>
 <div class="main-wrapper">
 
-	<header>
-		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-			<div class="container">
-				<a class="navbar-brand" href="/"><div class="logo"></div></a>
-				
-				<button class="navbar-toggler" type="button">
-					<span class="navbar-toggler-icon"></span>
-				</button>
 
-				<div class="navbar-collapse collapse">
-					<ul class="navbar-nav mr-auto">
-						<li class="nav-item">
-							<a class="nav-link" href="/loja/">Loja</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="/sobre-a-maps/">Sobre a Maps</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="/contato/">Contato</a>
-						</li>
-					</ul>
-					<ul class="navbar-nav mr-left">
-						<a class="nav-link" href="/carrinho/">Carrinho</a>
-						<?php echo do_shortcode("[woo_cart_icon]"); ?>
-					</ul>
-				</div><!-- .collapse -->
-			</div><!-- .container -->
-		</nav>
-	</header>
-
-	<div class="banner position-relative overflow-hidden text-center bg-light">
-		<div class="col-md-6 p-lg-6 mx-auto">
-			<h1 class="display-4 font-weight-normal">Calças que desafiam as normas</h1>
-			<p class="lead font-weight-normal">Nosso objetivo é fornecer calças para mulheres altas e com medidas em que o "normal" nao serve.</p>
-			<a class="btn btn-secondary" href="/sobre-a-maps/">Veja mais</a>
-		</div>
-	</div>
+	<?php get_template_part( 'template-parts/header/nav' ); ?>
 
 	<div class="site-content container">
 
