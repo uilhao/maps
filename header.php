@@ -23,7 +23,7 @@
 <div class="main-wrapper">
 
 
-	<?php get_template_part( 'template-parts/header/nav' ); ?>
+	<?php get_template_part( 'template-parts/header/nav-sticky' ); ?>
 
 	<div class="site-content container">
 

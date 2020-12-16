@@ -6,16 +6,27 @@
   height: 32px;
   width: 32px;
   margin: 0px 10px 0 3px;
+  position: relative;
 
   a {
     color: $black;
     text-decoration: none;
+    width: 100%;
   }
 }
 
 .cart-contents-count {
-  padding: 8px 15px;
-  display: block;
-  font-size: 10px;
+  // padding: 8px 15px;
+  // display: block;
+  position: absolute;
+  color: $white;
+  // height: 10px;
+  // width: 10px;
+  padding: 2px 8px;
+  font-size: 12px;
   font-weight: bolder;
+  border-radius: 50%;
+  background-color: $black;
+  right: -14px;
+  top: -7px;
 }
