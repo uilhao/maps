@@ -12,10 +12,11 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
-						<ul class="social list-unstyled">
-							<li class="nav-item icon instagram"><a href="/carrinho/">instagram</a></li>
-							<li class="nav-item icon facebook"><a href="/carrinho/">facebook</a></li>
-							<li class="nav-item icon phone"><a href="/carrinho/">Fone</a></li>
+						<ul class="social list-unstyl0ed">
+							<li class="nav-item"><a class="icon instagram" href="/"><span class="sr-only">instagram</span></a></li>
+							<li class="nav-item"><a class="icon facebook" href="/"><span class="sr-only">facebook</span></a></li>
+							<li class="nav-item"><a class="icon phone" href="/contato/"><span class="sr-only">fone</span></a></li>
+							<li class="nav-item"><span class="phone-no">(51) 992-366-767</span></li>
 						</ul>
 					</div>
 					<div class="col-md-6">
@@ -37,18 +38,8 @@
 							</button>
 
 							<div class="navbar-collapse collapse justify-content-center">
-								<ul class="navbar-nav">
-									<li class="nav-item">
-										<a class="nav-link" href="/loja/">Loja</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link" href="/sobre-a-maps/">Sobre a Maps</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link" href="/contato/">Contato</a>
-									</li>
-								</ul>
 								
+								<?php echo render_menu('main') ?>
 								
 							</div><!-- .collapse -->
 						</nav>

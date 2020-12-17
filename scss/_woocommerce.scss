@@ -9,7 +9,7 @@
   position: relative;
 
   a {
-    color: $black;
+    color: $link-color;
     text-decoration: none;
     width: 100%;
   }
@@ -26,7 +26,14 @@
   font-size: 12px;
   font-weight: bolder;
   border-radius: 50%;
-  background-color: $black;
+  background-color: $link-color;
   right: -14px;
   top: -7px;
+}
+
+.woocommerce {
+  .button.alt {
+    background-color: $primary !important;
+    color: $white;
+  }
 }

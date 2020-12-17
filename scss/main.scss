@@ -7,10 +7,13 @@
 @import "variables";
 
 // Theme
+@import "font";
+@import "type";
 @import "header";
 @import "banner";
 @import "navbar";
-@import "body";
+@import "breadcrumb";
+@import "content";
 @import "featurettes";
 @import "woocommerce";
 @import "footer";

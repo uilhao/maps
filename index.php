@@ -9,10 +9,13 @@
  */
 
 get_header();
-?>
+?>	
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+	<div class="breadcrumb">
+		<?php bcn_display($return = false, $linked = true, $reverse = false, $force = false); ?>
+	</div>
+
+	<main id="primary" class="content-area">
 
 		<?php
 		if ( have_posts() ) {
@@ -31,8 +34,7 @@ get_header();
 		}
 		?>
 
-		</main><!-- .site-main -->
-	</div><!-- .content-area -->
+	</main><!-- .content-area -->
 
 <?php
 get_footer();

@@ -1,5 +1,6 @@
 <?php
 /**
+ * Template Name: Product Home
  * The Template for displaying all single products
  *
  * This template can be overridden by copying it to yourtheme/woocommerce/single-product.php.

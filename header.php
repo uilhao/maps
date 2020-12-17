@@ -22,8 +22,13 @@
 <?php wp_body_open(); ?>
 <div class="main-wrapper">
 
-
 	<?php get_template_part( 'template-parts/header/nav-sticky' ); ?>
+
+	<?php 
+	if ( is_front_page() ) {
+		get_template_part( 'template-parts/header/banner' );
+	}
+	?>
 
 	<div class="site-content container">
 

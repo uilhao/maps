@@ -13,29 +13,30 @@
 ?>
 	</div><!-- #content -->
 
-	<footer class="container py-5">
-		<hr class="py-3" />
-		<div class="row">
-			<div class="col-6 col-md">
-				<h5>Sobre a Maps</h5>
-				<ul class="list-unstyled text-small">
-					<li><a class="text-muted" href="#">Como surgiu a idea</a></li>
-					<li><a class="text-muted" href="#">Por que as medidas nao sao padronizadas?</a></li>
-				</ul>
+	<footer class="pt-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-6 col-md">
+					<h5>Institucional</h5>
+					<?php echo render_menu('footer') ?>
+				</div>
+				<div class="col-6 col-md">
+					<h5>Formas de Pagmento</h5>
+					<img class="d-inline pr-1" src="/wp-content/themes/maps/assets/img/icons/visa.png" alt="Cartao Visa" />
+					<img class="d-inline pr-1" src="/wp-content/themes/maps/assets/img/icons/master.png" alt="Cartao MasterCard" />
+					<img class="d-inline pr-1" src="/wp-content/themes/maps/assets/img/icons/amex.png" alt="Cartao American Express" />
+					<img class="d-inline pr-1" src="/wp-content/themes/maps/assets/img/icons/diners.png" alt="Cartao Diners Club" />
+					<img class="d-inline pr-1" src="/wp-content/themes/maps/assets/img/icons/elo.png" alt="Cartao Elo" />
+					<img class="d-inline pr-1" src="/wp-content/themes/maps/assets/img/icons/hiper.png" alt="Cartao Hipermercado" />
+					<img class="d-inline pr-1" src="/wp-content/themes/maps/assets/img/icons/boleto.png" alt="Page com boleto" />
+				</div>
+				<div class="col-md-2">
+					<div class="logo"></div>
+					<small class="d-block mb-3 text-muted">© 2017-2020</small>
+				</div>
 			</div>
-			<div class="col-6 col-md">
-				<h5>Entre em contato</h5>
-				<ul class="list-unstyled text-small">
-					<li><a class="text-muted" href="#">Contato</a></li>
-					<li><a class="text-muted" href="#">Instagram</a></li>
-					<li><a class="text-muted" href="#">Facebook</a></li>
-				</ul>
-			</div>
-			<div class="col-md-2">
-				<div class="logo"></div>
-				<small class="d-block mb-3 text-muted">© 2017-2020</small>
-			</div>
-		</div>
+			<div class="disclaimer text-muted"<p><?php echo date('Y');?> Todos os direitos reservados.</p><div>
+		</div><!-- .container -->
 	</footer><!-- .main-footer -->
 
 </div><!-- .main-wrapper -->

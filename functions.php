@@ -10,6 +10,15 @@ function ms_add_theme_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'ms_add_theme_scripts' );
 
+add_action( 'init', function()
+{
+    $locations = [
+        'main' => 'Navegacao Principal',
+        'footer' => 'Navegacao Footer',
+    ];
+    register_nav_menus( $locations );
+});
+
 
 // Extensions
 add_theme_support( 'title-tag' );
@@ -93,3 +102,63 @@ function woo_cart_icon() {
     return ob_get_clean();
  
 }
+
+$location_settings = [
+                'main' => [
+                    'items_wrap' => '<ul class="%2$s navbar-nav">%3$s</ul>',
+                    'links_class' => 'class="nav-link" ',
+                    'list_class' => 'nav-item',
+                ],
+                'footer' => [
+                    'items_wrap' => '<ul class="%2$s text-small">%3$s</ul>',
+                    'links_class' => 'class="text-muted" ',
+                    'list_class' => 'item',
+                ],
+            ];
+/**
+ * Render menu from a specific location in the theme.
+ *
+ * @param string $location Location of the menu set in the theme template.
+ * @return string The rendered menu from location
+ */
+function render_menu($location)
+{
+    global $location_settings;
+
+    if ( !isset($location_settings[$location]) ) {
+        return "";
+    }
+
+    $params = [
+            'theme_location' => $location,
+            'container' => false,
+            'echo' => false,
+            'menu_class' => 'list-unstyled',
+            'items_wrap' => $location_settings[$location]['items_wrap']
+        ];
+
+    $nav = wp_nav_menu( $params );
+    
+    return str_replace('<a ', '<a ' . $location_settings[$location]['links_class'], $nav);
+}
+
+
+/**
+ * Customize css classes for menu item
+ *
+ * @param  array $classes Array with all the css classes
+ * @param  object $item Object with all menu item attributes
+ * @param  object $args Arguments used for rendering menu.
+ * @return array $classes Array with list of css classes.
+ */
+function menu_item_classes($classes, $item, $args)
+{
+    global $location_settings;
+
+    if ( !empty($location_settings[$args->theme_location]) ) {
+        $classes = [$location_settings[$args->theme_location]['list_class']];
+    }
+
+    return $classes;
+}
+add_filter('nav_menu_css_class', 'menu_item_classes', 1, 3);
