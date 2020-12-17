@@ -31,8 +31,13 @@ add_theme_support( 'title-tag' );
 add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 1568, 9999 );
 
-// Nav color.
-
+/**
+ * Remove the breadcrumbs 
+ */
+add_action( 'init', 'woo_remove_wc_breadcrumbs' );
+function woo_remove_wc_breadcrumbs() {
+    remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+}
 
 
 function ms_add_woocommerce_support() {
