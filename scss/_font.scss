@@ -7,3 +7,12 @@
   font-family: GothamLight;
   src: url("../font/GOTHAM-LIGHT.otf") format("opentype");
 }
+
+@font-face {
+  font-family: Quicksand;
+  src: url("../font/Quicksand-VariableFont_wght.ttf") format("opentype");
+}
+
+body {
+  font-family: $font-family-base;
+}

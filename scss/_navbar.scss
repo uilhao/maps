@@ -1,4 +1,8 @@
 .navbar {
+  @include breakpoints(xs, sm) {
+    margin-top: 10px;
+  }
+
   // background-color: $gray-100;
   // box-shadow: 0 8px 4px -4px rgba(0, 0, 0, 0.1);
   // border-top: 1px solid $gray-200;
@@ -30,9 +34,10 @@
     position: relative;
   }
 
-  .navbar-toggler {
-    // border-color: $black;
-    // background-color: $black;
+  .navbar-toggler-icon {
+    background: url(../img/icons/hamburger.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 

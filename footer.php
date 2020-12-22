@@ -35,7 +35,7 @@
 					<small class="d-block mb-3 text-muted">© 2017-2020</small>
 				</div>
 			</div>
-			<div class="disclaimer text-muted"<p><?php echo date('Y');?> Todos os direitos reservados.</p><div>
+			<div class="disclaimer text-muted"<p><?php echo date('Y');?> Todos os direitos reservados. Versão Beta 1.0</p><div>
 		</div><!-- .container -->
 	</footer><!-- .main-footer -->
 
