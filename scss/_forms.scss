@@ -179,20 +179,24 @@ select.form-control,
 
 textarea.form-control,
 .woocommerce form .form-row textarea,
-.woocommerce form .form-row.thwcfd-field-textarea {
+.woocommerce form .form-row.thwcfd-field-textarea,
+.woocommerce form .form-row.notes textarea {
   height: auto;
 }
 
-.woocommerce form .form-row.thwcfd-field-textarea label {
+.woocommerce form .form-row.thwcfd-field-textarea label,
+.woocommerce form .form-row.notes label {
   width: 100%;
 }
 
-.woocommerce form .form-row.thwcfd-field-textarea textarea {
+.woocommerce form .form-row.thwcfd-field-textarea textarea,
+.woocommerce form .form-row.notes textarea {
   overflow: auto;
   resize: vertical;
 }
 
-.woocommerce form .form-row.thwcfd-field-textarea .woocommerce-input-wrapper {
+.woocommerce form .form-row.thwcfd-field-textarea .woocommerce-input-wrapper,
+.woocommerce form .form-row.notes .woocommerce-input-wrapper {
   width: 100%;
 }
 

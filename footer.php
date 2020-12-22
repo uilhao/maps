@@ -21,7 +21,7 @@
 					<?php echo render_menu('footer') ?>
 				</div>
 				<div class="col-6 col-md">
-					<h5>Formas de Pagmento</h5>
+					<h5>Formas de Pagamento</h5>
 					<img class="d-inline pr-1" src="/wp-content/themes/maps/assets/img/icons/visa.png" alt="Cartao Visa" />
 					<img class="d-inline pr-1" src="/wp-content/themes/maps/assets/img/icons/master.png" alt="Cartao MasterCard" />
 					<img class="d-inline pr-1" src="/wp-content/themes/maps/assets/img/icons/amex.png" alt="Cartao American Express" />

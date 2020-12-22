@@ -6,7 +6,7 @@ function ms_add_theme_scripts() {
 	wp_enqueue_style( 'main-style', get_template_directory_uri() . "/assets/css/main.min.css", false, '1.0' );
 	
 	// JS
-	wp_enqueue_script( 'collapse-js', get_template_directory_uri() . "/assets/js/collapse.js", ['jquery'], '1.0', true );
+	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . "/assets/js/bootstrap.min.js", ['jquery'], '1.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'ms_add_theme_scripts' );
 
@@ -107,6 +107,40 @@ function woo_cart_icon() {
     return ob_get_clean();
  
 }
+
+
+add_filter('woocommerce_product_tabs', 'maps_rename_additional_info_tab');
+function maps_rename_additional_info_tab( $tabs ) {
+	$tabs['additional_information']['title'] = 'Informaçoes';
+	return $tabs;
+}
+
+add_action('woocommerce_after_single_product_summary', function(){
+?>
+<a href="#" data-toggle="modal" data-target="#exampleModal"><img src="/wp-content/themes/maps/assets/img/grade-medidas.svg" alt="Guida de medidas" /></a>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Guida de Medidas</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="/wp-content/themes/maps/assets/img/grade-medidas.svg" alt="Guida de medidas" />
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <?php
+}, 12);
+
 
 $location_settings = [
                 'main' => [

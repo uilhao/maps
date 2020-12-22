@@ -36,4 +36,25 @@
     background-color: $primary !important;
     color: $white;
   }
+
+  .list-group-item a {
+    display: block;
+  }
+
+  #cfpp .calculo-de-frete input {
+    height: 40px;
+  }
+
+  #cfpp svg {
+    height: 25px;
+  }
+
+  #cfpp .calculo-de-frete #calcular-frete {
+    height: 41px;
+    background-color: $primary !important;
+    background-size: cover;
+    border-radius: 3px;
+    line-height: 43px;
+    margin-left: 4px;
+  }
 }

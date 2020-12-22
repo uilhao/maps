@@ -33,11 +33,11 @@
 				<div class="row">
 					<div class="col-4">
 						<nav class="navbar navbar-expand-md">
-							<button class="navbar-toggler" type="button">
+							<button class="navbar-toggler" type="button" data-toggle="collapse" href="#mainMenu">
 								<span class="navbar-toggler-icon"></span>
 							</button>
 
-							<div class="navbar-collapse collapse justify-content-center">
+							<div id="mainMenu" class="navbar-collapse collapse justify-content-center">
 								
 								<?php echo render_menu('main') ?>
 								
@@ -50,7 +50,7 @@
 					</div>
 					<div class="col-4">
 						<div class="cart d-flex">
-							<ul class="account-menu list-unstyled mr-4">
+							<ul class="account-menu list-unstyled">
 								<li class="nav-item"><a href="/minha-conta/">Minha Conta</a><li>
 							</ul>	
 							<ul class="list-unstyled cart-icon">
