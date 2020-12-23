@@ -57,4 +57,54 @@
     line-height: 43px;
     margin-left: 4px;
   }
+
+  div.product form.cart .variations {
+    margin-bottom: 5px;
+  }
+}
+
+.link-como-medir,
+.link-guia-medida {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.como-medir-icon,
+.guia-medida-icon {
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  margin: 0px 10px 0 0;
+}
+
+.como-medir-icon {
+  background: url(../img/icons/info.svg);
+}
+
+.guia-medida-icon {
+  background: url(../img/icons/measure.svg);
+}
+
+.modal {
+  padding: 0 !important; // override inline padding-right added from js
+}
+.modal .modal-dialog.wide {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  // margin: 0;
+}
+// .modal .modal-content {
+//   height: 100%;
+//   border: 0;
+//   border-radius: 0;
+// }
+.modal .modal-body {
+  overflow-y: auto;
+}
+
+.modal .wide .modal-body img {
+  width: 100%;
 }

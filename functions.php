@@ -3,10 +3,13 @@
 // STYLE
 function ms_add_theme_scripts() {
 	// CSS
+	wp_enqueue_style( 'owl-style', get_template_directory_uri() . "/assets/css/owl.carousel.min.css", false, '1.0' );
 	wp_enqueue_style( 'main-style', get_template_directory_uri() . "/assets/css/main.min.css", false, '1.0' );
 	
 	// JS
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . "/assets/js/bootstrap.min.js", ['jquery'], '1.0', true );
+	wp_enqueue_script( 'owl-js', get_template_directory_uri() . "/assets/js/owl.carousel.min.js", ['jquery'], '1.0', true );
+	wp_enqueue_script( 'gallery-js', get_template_directory_uri() . "/assets/js/gallery.js", ['jquery', 'owl-js'], '1.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'ms_add_theme_scripts' );
 
@@ -111,26 +114,45 @@ function woo_cart_icon() {
 
 add_filter('woocommerce_product_tabs', 'maps_rename_additional_info_tab');
 function maps_rename_additional_info_tab( $tabs ) {
-	$tabs['additional_information']['title'] = 'Informaçoes';
+	$tabs['additional_information']['title'] = 'Informações';
 	return $tabs;
 }
 
+// TODO Move
 add_action('woocommerce_after_single_product_summary', function(){
 ?>
-<a href="#" data-toggle="modal" data-target="#exampleModal"><img src="/wp-content/themes/maps/assets/img/grade-medidas.svg" alt="Guida de medidas" /></a>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl modal-dialog-scrollable">
+<div class="modal fade" id="guiaMedidas" tabindex="-1" aria-labelledby="guiaMedidasLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl wide">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Guida de Medidas</h5>
+        <h5 class="modal-title" id="guiaMedidasLabel">Guia de Medidas</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <img src="/wp-content/themes/maps/assets/img/grade-medidas.svg" alt="Guida de medidas" />
+        <img src="/wp-content/themes/maps/assets/img/grade-medida-lg.jpg" alt="Guida de medidas" />
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="comoMedir" tabindex="-1" aria-labelledby="comoMedirLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="comoMedirLabel">Como se medir</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="/wp-content/themes/maps/assets/img/como-medir.jpg" alt="Guida de medidas" />
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
@@ -141,6 +163,49 @@ add_action('woocommerce_after_single_product_summary', function(){
     <?php
 }, 12);
 
+
+add_action('woocommerce_after_single_product', function(){
+    $imgs = [
+        "/wp-content/themes/maps/assets/img/gallery/calca-perfil-lado-camisa-vermelha-sm.jpg",
+        "/wp-content/themes/maps/assets/img/gallery/close-up-etiqueta-sm.jpg",
+        "/wp-content/themes/maps/assets/img/gallery/close-up-frente-partial-sm.jpg",
+        "/wp-content/themes/maps/assets/img/gallery/corpo-inteiro-bota-sm.jpg",
+        "/wp-content/themes/maps/assets/img/gallery/corpo-inteiro-converse-sm.jpg",
+        "/wp-content/themes/maps/assets/img/gallery/esticando-perna-salto-sm.jpg",
+        "/wp-content/themes/maps/assets/img/gallery/foco-calca-jeans-sm.jpg",
+        "/wp-content/themes/maps/assets/img/gallery/perfi-del-lado-saldo-salto-tigrado-sm.jpg",
+        "/wp-content/themes/maps/assets/img/gallery/perfil-de-lado-salto-alto-sm.jpg",
+        "/wp-content/themes/maps/assets/img/gallery/perna-direita-para-frente-sm.jpg",
+        // "/wp-content/themes/maps/assets/img/gallery/perna-pra-cima-de-salto.jpg",
+        // "/wp-content/themes/maps/assets/img/gallery/sentada-de-perna-para-cima.jpg",
+    ];
+?>
+
+<section class="content-area mt-5">
+    <div class="owl-carousel one-by-one owl-theme">
+        <?php foreach ($imgs as $img) { ?>
+            <div class="item text-center">
+                <img src="<?= $img ?>" class="img align-middle" alt="" />
+            </div>
+        <?php } ?>
+    </div>
+</section>
+<?php
+}, 12);
+
+
+add_action('woocommerce_before_single_variation', function(){
+?>
+    <div class="row mb-4">
+        <div class="col-6 col-lg-5">
+            <span class="guia-medida-icon"></span><a class="link-guia-medida" href="#" data-toggle="modal" data-target="#guiaMedidas">Guia de Medidas</a>
+        </div>
+        <div class="col-6">
+            <span class="como-medir-icon"></span><a class="link-como-medir" href="#" data-toggle="modal" data-target="#comoMedir">Como se medir</a>
+        </div>
+    </div>
+<?php
+}, 29);
 
 $location_settings = [
                 'main' => [

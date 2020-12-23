@@ -13,8 +13,8 @@
 				<div class="row">
 					<div class="col-8 col-md-6">
 						<ul class="social list-unstyl0ed">
-							<li class="nav-item"><a class="icon instagram" href="/"><span class="sr-only">instagram</span></a></li>
-							<li class="nav-item"><a class="icon facebook" href="/"><span class="sr-only">facebook</span></a></li>
+							<li class="nav-item"><a class="icon instagram" target="_blank" href="https://www.instagram.com/offlimitsbymaps"><span class="sr-only">instagram</span></a></li>
+							<li class="nav-item"><a class="icon facebook" target="_blank" href="https://www.facebook.com/OFFlimitsbyMAPs"><span class="sr-only">facebook</span></a></li>
 							<li class="nav-item"><a class="icon phone" href="/contato/"><span class="sr-only">fone</span></a></li>
 							<li class="nav-item"><span class="phone-no">(51) 992-366-767</span></li>
 						</ul>
@@ -37,10 +37,8 @@
 								<span class="navbar-toggler-icon"></span>
 							</button>
 
-							<div id="mainMenu" class="navbar-collapse collapse justify-content-center">
-								
-								<?php echo render_menu('main') ?>
-								
+							<div id="mainMenu" class="navbar-collapse collapse justify-content-center">								
+								<?php echo render_menu('main') ?>								
 							</div><!-- .collapse -->
 						</nav>
 					
