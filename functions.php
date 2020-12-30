@@ -142,11 +142,11 @@ add_action('woocommerce_after_single_product_summary', function(){
   </div>
 </div>
 
-<div class="modal fade" id="comoMedir" tabindex="-1" aria-labelledby="comoMedirLabel" aria-hidden="true">
+<div class="modal fade" id="comoMedir" tabindex="-1" aria-labelledby="comoMediaLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="comoMedirLabel">Como se medir</h5>
+        <h5 class="modal-title" id="comoMediaLabel">Como se medir</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
