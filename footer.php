@@ -22,13 +22,13 @@
 				</div>
 				<div class="col-6 col-md">
 					<h5>Formas de Pagamento</h5>
-					<img class="d-inline pr-2" src="/wp-content/themes/maps/assets/img/icons/visa.png" alt="Cartao Visa" />
-					<img class="d-inline pr-2" src="/wp-content/themes/maps/assets/img/icons/master.png" alt="Cartao MasterCard" />
-					<img class="d-inline pr-2" src="/wp-content/themes/maps/assets/img/icons/amex.png" alt="Cartao American Express" />
-					<img class="d-inline pr-2" src="/wp-content/themes/maps/assets/img/icons/diners.png" alt="Cartao Diners Club" />
-					<img class="d-inline pr-2" src="/wp-content/themes/maps/assets/img/icons/elo.png" alt="Cartao Elo" />
-					<img class="d-inline pr-2" src="/wp-content/themes/maps/assets/img/icons/hiper.png" alt="Cartao Hipermercado" />
-					<img class="d-inline pr-2" src="/wp-content/themes/maps/assets/img/icons/boleto.png" alt="Page com boleto" />
+					<img class="d-inline pr-2 pb-2" src="/wp-content/themes/maps/assets/img/icons/visa.png" alt="Cartao Visa" />
+					<img class="d-inline pr-2 pb-2" src="/wp-content/themes/maps/assets/img/icons/master.png" alt="Cartao MasterCard" />
+					<img class="d-inline pr-2 pb-2" src="/wp-content/themes/maps/assets/img/icons/amex.png" alt="Cartao American Express" />
+					<img class="d-inline pr-2 pb-2" src="/wp-content/themes/maps/assets/img/icons/diners.png" alt="Cartao Diners Club" />
+					<img class="d-inline pr-2 pb-2" src="/wp-content/themes/maps/assets/img/icons/elo.png" alt="Cartao Elo" />
+					<img class="d-inline pr-2 pb-2" src="/wp-content/themes/maps/assets/img/icons/hiper.png" alt="Cartao Hipermercado" />
+					<img class="d-inline pr-2 pb-2" src="/wp-content/themes/maps/assets/img/icons/boleto.png" alt="Page com boleto" />
 				</div>
 				<div class="col-md-2 text-center">
 					<div class="logo"></div>

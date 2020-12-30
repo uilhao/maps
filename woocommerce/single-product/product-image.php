@@ -48,7 +48,7 @@ $wrapper_classes   = apply_filters(
 		}
 
 		echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id ); // phpcs:disable WordPress.XSS.EscapeOutput.OutputNotEscaped
-
+		// TODO move to filter above
 		if ( wp_get_attachment_caption( $post_thumbnail_id ) ) : ?>
 			<figcaption class="figure-caption py-2"><?php echo wp_kses_post( wp_get_attachment_caption( $post_thumbnail_id ) ); ?></figcaption>
 		<?php endif;
