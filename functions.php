@@ -266,3 +266,12 @@ function menu_item_classes($classes, $item, $args)
     return $classes;
 }
 add_filter('nav_menu_css_class', 'menu_item_classes', 1, 3);
+
+
+add_filter( 'woocommerce_shipping_calculator_enable_city', function(){
+  return false;
+}, 1);
+
+add_filter( 'woocommerce_shipping_calculator_enable_state', function(){
+  return true;
+}, 1);

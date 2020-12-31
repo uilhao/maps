@@ -17,8 +17,6 @@
 							<li class="nav-item"><a class="icon facebook" target="_blank" href="https://www.facebook.com/OFFlimitsbyMAPs"><span class="sr-only">facebook</span></a></li>
 							<li class="nav-item"><a class="icon phone" href="/contato/"><span class="sr-only">fone</span></a></li>
 							<li class="nav-item"><span class="phone-no d-inline">(51) 992-366-767</span></li>
-							<li class="nav-item"><span class="phone-no d-none d-md-inline px-1">/</li>
-							<li class="nav-item"><span class="phone-no d-none d-md-inline">(51) 992-366-767</span></li>
 						</ul>
 					</div>
 					<div class="col-4 col-md-4 ml-auto">

@@ -61,6 +61,25 @@
   div.product form.cart .variations {
     margin-bottom: 5px;
   }
+
+  .price .woocommerce-Price-amount {
+    font-size: 2rem;
+  }
+
+  .shipping-calculator-form #calc_shipping_country_field {
+    display: none;
+  }
+}
+
+.home {
+  #cfpp {
+    display: none;
+    margin: 0;
+  }
+
+  .calculo-de-frete {
+    display: none;
+  }
 }
 
 .link-como-medir,
