@@ -42,15 +42,15 @@ header {
 
   .logo {
     @include breakpoints(xs, sm) {
-      width: 90px;
-      height: 56px;
+      width: 85px;
+      height: 54px;
     }
 
     display: inline-block;
     text-indent: -9999px;
-    width: 146px;
-    height: 90px;
-    background: url(../img/logo-offlimits.svg);
+    width: 140px;
+    height: 89px;
+    background: url(../img/logo-offlimits-v2.svg);
     background-repeat: no-repeat;
     background-size: cover;
   }
