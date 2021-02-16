@@ -1,11 +1,11 @@
-$padding: $nav-height + $navbar-padding-x + $navbar-brand-padding-y + 2rem;
+$padding: $nav-height + $navbar-padding-x + $navbar-padding-y + 3rem;
 
 .banner {
-  background: url("../img/banner-calca-jeans-offlimits.jpg");
+  background: url("../img/banner-calca-jeans-offlimits-v2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 0%;
-  color: $blue;
+  color: $white;
   text-shadow: 1px 1px $gray-500;
   // margin-top: $padding;
   margin-bottom: 2rem;
@@ -15,8 +15,9 @@ $padding: $nav-height + $navbar-padding-x + $navbar-brand-padding-y + 2rem;
 
   h1 {
     text-transform: none;
+    text-decoration: underline;
   }
-  
+
   .btn {
     background-color: $blue;
     border-color: $blue;
@@ -24,6 +25,6 @@ $padding: $nav-height + $navbar-padding-x + $navbar-brand-padding-y + 2rem;
   }
 
   .lead {
-    color: $blue;
+    color: $white;
   }
 }

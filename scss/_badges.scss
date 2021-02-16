@@ -1,0 +1,30 @@
+.badges {
+  @include breakpoints(xs, sm) {
+    height: 200px;
+    padding-top: 90px;
+  }
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  color: $white;
+  height: 400px;
+  padding-top: 180px;
+
+  &:hover {
+    text-decoration: none;
+    color: $white;
+  }
+
+  &.shop {
+    background: url("../img/banner-shop.jpg");
+  }
+
+  &.shipping {
+    background: url("../img/banner-frete-gratis.jpg");
+  }
+
+  h2 {
+    text-decoration: underline;
+  }
+}

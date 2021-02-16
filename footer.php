@@ -13,6 +13,12 @@
 ?>
 	</div><!-- #content -->
 
+	<?php 
+	if ( is_front_page() ) {
+		get_template_part( 'template-parts/content/story' );
+	}
+	?>
+
 	<footer class="pt-5">
 		<div class="container">
 			<div class="row">
