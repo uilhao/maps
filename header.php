@@ -17,7 +17,6 @@
 	window.dataLayer = window.dataLayer || [];
 	function gtag(){dataLayer.push(arguments);}
 	gtag('js', new Date());
-
 	gtag('config', 'G-ZM1QKDZRL7');
 	</script>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
@@ -34,9 +33,9 @@
 	<?php get_template_part( 'template-parts/header/nav-sticky' ); ?>
 
 	<?php 
-	get_template_part( 'template-parts/header/banner-mulher' );
+	// get_template_part( 'template-parts/header/banner-mulher' );
 	if ( is_front_page() ) {
-		// get_template_part( 'template-parts/header/banner' );
+		get_template_part( 'template-parts/header/banner' );
 		get_template_part( 'template-parts/content/badges' );
 	}
 	?>

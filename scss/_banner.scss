@@ -1,16 +1,16 @@
 $padding: $nav-height + $navbar-padding-x + $navbar-padding-y + 3rem;
 
 .banner {
-  @include breakpoints(xs) {
-    padding: 5rem 0;
-  }
+  // @include breakpoints(xs) {
+  //   padding: 5rem 0;
+  // }
 
-  // background: url("../img/banner-calca-jeans-offlimits-v2.jpg");
-  background: url("../img/banner-semana-mulher.jpg");
+  background: url("../img/banner-calca-jeans-offlimits-v2.jpg");
+  // background: url("../img/banner-semana-mulher.jpg");
   background-repeat: no-repeat;
-  background-color: #f1f1f1;
-  // background-size: cover;
-  background-size: contain;
+  // background-color: #f1f1f1;
+  background-size: cover;
+  // background-size: contain;
   background-position: 50% 0%;
   color: $white;
   text-shadow: 1px 1px $gray-500;
