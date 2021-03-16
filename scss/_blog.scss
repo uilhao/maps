@@ -1,0 +1,29 @@
+article.post {
+  padding-bottom: $vertical-space;
+  margin-bottom: $vertical-space + 2em;
+  border-bottom: 1px solid $gray-200;
+
+  .image-header {
+    @include breakpoints(xs, sm) {
+      height: 200px;
+    }
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    color: $white;
+    height: 400px;
+    margin-bottom: $spacer;
+  }
+
+  h2 {
+    a {
+      &:hover {
+        text-decoration: none;
+        color: $black;
+      }
+
+      color: $black;
+    }
+  }
+}

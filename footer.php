@@ -19,7 +19,7 @@
 	}
 	?>
 
-	<footer class="pt-5">
+	<footer class="main-footer pt-5">
 		<div class="container">
 			<div class="row">
 				<div class="col-6 col-md">

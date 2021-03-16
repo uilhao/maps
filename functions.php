@@ -22,6 +22,29 @@ add_action( 'init', function()
     register_nav_menus( $locations );
 });
 
+/**
+ * Register widget area.
+ *
+ * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+ */
+function maps_widgets_init() {
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Right Sidebar', 'maps' ),
+			'id'            => 'sidebar-right',
+			'description'   => esc_html__( 'Add widgets here.', 'maps' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+}
+add_action( 'widgets_init', 'maps_widgets_init' );
+
+// init widgets
+require get_template_directory() . '/includes/widgets.php';
+
 
 // Extensions
 add_theme_support( 'title-tag' );
@@ -165,6 +188,10 @@ add_action('woocommerce_after_single_product_summary', function(){
 
 
 add_action('woocommerce_after_single_product', function(){
+    if ( is_front_page() || is_home() ) {
+      return;
+    }
+
     $imgs = [
         "/wp-content/themes/maps/assets/img/gallery/calca-perfil-lado-camisa-vermelha-sm.jpg",
         "/wp-content/themes/maps/assets/img/gallery/close-up-etiqueta-sm.jpg",
@@ -275,3 +302,18 @@ add_filter( 'woocommerce_shipping_calculator_enable_city', function(){
 add_filter( 'woocommerce_shipping_calculator_enable_state', function(){
   return true;
 }, 1);
+
+
+function maps_excerpt_length( $length ) {
+	return 5;
+}
+add_filter( 'excerpt_length', 'maps_excerpt_length' );
+
+function maps_continue_reading_link() {
+	return '<br/><a class="read-more btn btn-primary mt-3 d-inline-block" href="'. get_permalink() . '">ver mais</a>';
+}
+
+function maps_auto_excerpt_more( $more ) {
+	return ' &hellip;' . maps_continue_reading_link();
+}
+add_filter( 'excerpt_more', 'maps_auto_excerpt_more' );
