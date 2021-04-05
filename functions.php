@@ -147,7 +147,7 @@ add_action('woocommerce_after_single_product_summary', function(){
 
 <!-- Modal -->
 <div class="modal fade" id="guiaMedidas" tabindex="-1" aria-labelledby="guiaMedidasLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl wide">
+  <div class="modal-dialog modal-xl">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="guiaMedidasLabel">Guia de Medidas</h5>
