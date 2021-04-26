@@ -134,6 +134,32 @@ function woo_cart_icon() {
  
 }
 
+/**
+ * 
+ */
+function get_product_info() {
+  global $post;
+  
+  $terms = get_the_terms( $post->ID, 'product_cat' );
+
+  $info = [
+    'guida_medidas' => 'guiaMedidas',
+    'como_medir' => 'comoMedir',
+    'slug' => '',
+  ];
+
+  if ( !empty($terms[0]->slug) && $terms[0]->slug ) {
+    $slug = $terms[0]->slug;
+    $info = [
+      'slug' => $terms[0]->slug,
+      'guida_medidas' => $info['guida_medidas'] . $slug,
+      'como_medir' => $info['como_medir'] . $slug,
+    ];
+  }
+
+  return $info;
+}
+
 
 add_filter('woocommerce_product_tabs', 'maps_rename_additional_info_tab');
 function maps_rename_additional_info_tab( $tabs ) {
@@ -143,10 +169,15 @@ function maps_rename_additional_info_tab( $tabs ) {
 
 // TODO Move
 add_action('woocommerce_after_single_product_summary', function(){
+
+$info = get_product_info();
+
+$img_guia = "/wp-content/themes/maps/assets/img/grade-medida-lg-" . $info['slug'] . ".jpg";
+$img_medir = "/wp-content/themes/maps/assets/img/como-medir-" . $info['slug'] . ".jpg";
 ?>
 
 <!-- Modal -->
-<div class="modal fade" id="guiaMedidas" tabindex="-1" aria-labelledby="guiaMedidasLabel" aria-hidden="true">
+<div class="modal fade" id="<?= $info['guida_medidas']; ?>" tabindex="-1" aria-labelledby="guiaMedidasLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl">
     <div class="modal-content">
       <div class="modal-header">
@@ -156,7 +187,7 @@ add_action('woocommerce_after_single_product_summary', function(){
         </button>
       </div>
       <div class="modal-body">
-        <img src="/wp-content/themes/maps/assets/img/grade-medida-lg.jpg" alt="Guida de medidas" />
+        <img src="<?= $img_guia; ?>" alt="Guida de medidas" />
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
@@ -165,7 +196,7 @@ add_action('woocommerce_after_single_product_summary', function(){
   </div>
 </div>
 
-<div class="modal fade" id="comoMedir" tabindex="-1" aria-labelledby="comoMediaLabel" aria-hidden="true">
+<div class="modal fade" id="<?= $info['como_medir']; ?>" tabindex="-1" aria-labelledby="comoMediaLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl">
     <div class="modal-content">
       <div class="modal-header">
@@ -175,7 +206,7 @@ add_action('woocommerce_after_single_product_summary', function(){
         </button>
       </div>
       <div class="modal-body">
-        <img src="/wp-content/themes/maps/assets/img/como-medir.jpg" alt="Guida de medidas" />
+        <img src="<?= $img_medir; ?>" alt="Como se medir" />
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
@@ -220,15 +251,15 @@ add_action('woocommerce_after_single_product', function(){
 <?php
 }, 12);
 
-
 add_action('woocommerce_before_single_variation', function(){
+  $info = get_product_info();
 ?>
     <div class="row mb-4">
         <div class="col-6 col-lg-5">
-            <span class="guia-medida-icon"></span><a class="link-guia-medida" href="#" data-toggle="modal" data-target="#guiaMedidas">Guia de Medidas</a>
+            <span class="guia-medida-icon"></span><a class="link-guia-medida" href="#" data-toggle="modal" data-target="#<?= $info['guida_medidas']; ?>">Guia de Medidas</a>
         </div>
         <div class="col-6">
-            <span class="como-medir-icon"></span><a class="link-como-medir" href="#" data-toggle="modal" data-target="#comoMedir">Como se medir</a>
+            <span class="como-medir-icon"></span><a class="link-como-medir" href="#" data-toggle="modal" data-target="#<?= $info['como_medir']; ?>">Como se medir</a>
         </div>
     </div>
 <?php
