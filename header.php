@@ -36,7 +36,6 @@
 	// get_template_part( 'template-parts/header/banner-mulher' );
 	if ( is_front_page() ) {
 		get_template_part( 'template-parts/header/banner' );
-		get_template_part( 'template-parts/content/badges' );
 	}
 	?>
 
