@@ -5,18 +5,20 @@ $padding: $nav-height + $navbar-padding-x + $navbar-padding-y + 3rem;
   //   padding: 5rem 0;
   // }
 
-  background: url("../img/banner-calca-jeans-offlimits-v2.jpg");
+  // background: url("../img/banner-calca-jeans-offlimits-v2.jpg");
+  background: url("../img/banner-sale-stock.jpg");
   // background: url("../img/banner-m.jpg");
   background-repeat: no-repeat;
   // background-color: #f1f1f1;
   background-size: cover;
   // background-size: contain;
-  background-position: 50% 0%;
+  background-position: 0 -110px;
   color: $white;
   text-shadow: 1px 1px $gray-500;
   // margin-top: $padding;
   margin-bottom: 2rem;
-  padding: $padding 0;
+  // padding: $padding 0;
+  padding: 9.8rem 0;
   border-top: 1px solid $gray-400;
   border-bottom: 1px solid $gray-400;
 
