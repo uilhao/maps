@@ -22,6 +22,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="format-detection" content="telephone=no">
+	<meta name="facebook-domain-verification" content="fzeypl08cvcwd0r9kpjl729wwh47mh" />
     <link rel="shortcut icon" href="<?= get_stylesheet_directory_uri() ?>/assets/img/favicon.ico" />
 	<?php wp_head(); ?>
 </head>
