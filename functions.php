@@ -141,6 +141,8 @@ function get_product_info() {
   global $post;
   
   $terms = get_the_terms( $post->ID, 'product_cat' );
+  $grade = get_post_meta( $post->ID, 'grade', $single=true );
+  $guia = get_post_meta( $post->ID, 'guia', $single=true );
 
   $info = [
     'guida_medidas' => 'guiaMedidas',
@@ -154,6 +156,8 @@ function get_product_info() {
       'slug' => $terms[0]->slug,
       'guida_medidas' => $info['guida_medidas'] . $slug,
       'como_medir' => $info['como_medir'] . $slug,
+      'grade' => $grade,
+      'guia' => $guia,
     ];
   }
 
@@ -172,8 +176,8 @@ add_action('woocommerce_after_single_product_summary', function(){
 
 $info = get_product_info();
 
-$img_guia = "/wp-content/themes/maps/assets/img/grade-medida-lg-" . $info['slug'] . ".jpg";
-$img_medir = "/wp-content/themes/maps/assets/img/como-medir-" . $info['slug'] . ".jpg";
+$img_guia = !empty($info['grade']) ? $info['grade'] : "/wp-content/themes/maps/assets/img/grade-medida-lg-" . $info['slug'] . ".jpg";
+$img_medir = !empty($info['guia']) ? $info['guia'] : "/wp-content/themes/maps/assets/img/como-medir-" . $info['slug'] . ".jpg";
 ?>
 
 <!-- Modal -->
