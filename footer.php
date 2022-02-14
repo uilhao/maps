@@ -41,7 +41,7 @@
 					<small class="d-block mb-3 text-muted">© <?php echo date('Y');?></small>
 				</div>
 			</div>
-			<div class="disclaimer text-muted"<p><?php echo date('Y');?> Todos os direitos reservados. Versão Beta 1.0</p><div>
+			<div class="disclaimer text-muted"><p><?php echo date('Y');?> Todos os direitos reservados. Versão Beta 1.0</p><div>
 		</div><!-- .container -->
 	</footer><!-- .main-footer -->
 
