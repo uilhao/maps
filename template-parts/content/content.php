@@ -25,8 +25,9 @@
 	</header><!-- .entry-header --> 
  
 	<div class="entry-content"> 
+		<p>Publicado em <?php echo get_the_date(); ?> by <?php the_author_posts_link(); ?></p>
 		<?php 
-		the_content( 
+		the_excerpt( 
 			sprintf( 
 				wp_kses( 
 					/* translators: %s: Post title. Only visible to screen readers. */ 
@@ -40,7 +41,7 @@
 				get_the_title() 
 			) 
 		); 
- 
+		
 		wp_link_pages( 
 			array( 
 				'before' => '<div class="page-links">' . __( 'Pages:', 'twentynineteen' ), 
@@ -48,6 +49,7 @@
 			) 
 		); 
 		?> 
+
 	</div><!-- .entry-content --> 
  
 	<footer class="entry-footer"> 

@@ -18,7 +18,7 @@ get_header();
 	<main id="primary" class="content-area">
 		<div class="row">
 			<div class="col-md-9">
-				<?php
+			<?php
 				if ( have_posts() ) {
 
 					// Load posts loop.

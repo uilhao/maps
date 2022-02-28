@@ -42,6 +42,7 @@ function maps_widgets_init() {
 }
 add_action( 'widgets_init', 'maps_widgets_init' );
 
+
 // init widgets
 require get_template_directory() . '/includes/widgets.php';
 
@@ -352,3 +353,4 @@ function maps_auto_excerpt_more( $more ) {
 	return ' &hellip;' . maps_continue_reading_link();
 }
 add_filter( 'excerpt_more', 'maps_auto_excerpt_more' );
+

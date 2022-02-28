@@ -19,7 +19,7 @@ get_header();
 while ( have_posts() ) :
 	the_post();
 
-	get_template_part( 'template-parts/content/content-single' );
+	get_template_part( 'template-parts/content/content-blog' );
 
 	if ( is_attachment() ) {
 		// Parent post navigation.
@@ -30,7 +30,19 @@ while ( have_posts() ) :
 			)
 		);
 	}
+?>
 
+		<div class="row">
+			<div class="pages text-left col-6">
+				<?php next_post_link( '&laquo; %link' ); ?>
+			</div>
+			<div class="pages text-end col-6">
+			<?php previous_post_link( '%link &raquo' ); ?>
+			</div>
+		</div>
+
+<?php
+	
 	// If comments are open or there is at least one comment, load up the comment template.
 	if ( comments_open() || get_comments_number() ) {
 		comments_template();
