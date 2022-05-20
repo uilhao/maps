@@ -1,23 +1,14 @@
 $padding: $nav-height + $navbar-padding-x + $navbar-padding-y + 3rem;
 
 .banner {
-  @include breakpoints(xs, sm) {
-    padding: 5rem 0;
-    background-position: 0 -6px;
-  }
-
-  @include breakpoints(sm) {
-    padding: 5rem 0;
-    background-position: 0 -67px;
-  }
-
-  @include breakpoints(md) {
-    padding: 5rem 0;
-    background-position: 0 -94px;
+  @include breakpoints(xs, sm, md) {
+    padding: 3rem 0;
+    background-size: contain;
   }
 
   @include breakpoints(lg) {
-    background-position: 0 0;
+    padding: 5rem 0;
+    background-size: contain;
   }
 
   // background: url("../img/banner-calca-jeans-offlimits-v2.jpg");
@@ -28,7 +19,7 @@ $padding: $nav-height + $navbar-padding-x + $navbar-padding-y + 3rem;
   // background-color: #f1f1f1;
   background-size: cover;
   // background-size: contain;
-  background-position: 0 -208px;
+  background-position: 50% 0;
   color: $white;
   text-shadow: 1px 1px $gray-500;
   // margin-top: $padding;
